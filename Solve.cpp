@@ -29,7 +29,7 @@ void Solve::solve(double adiag[], double aleft[], double arite[], double f[], co
   
 
     //
-    //  Εκτελείται απαλοιφή Gauss στο σύστημα και αποθηκεύει για την αντίστρφη επίλυση.
+    //  Εκτελείται απαλοιφή Gauss στο σύστημα και αποθηκεύει για την αντίστροφη επίλυση.
     // 
     //
 
@@ -45,8 +45,8 @@ void Solve::solve(double adiag[], double aleft[], double arite[], double f[], co
     adiag[nu - 1] = adiag[nu - 1] - aleft[nu - 1] * arite[nu - 2];
         
     //
-    //  Carry out the same elimination steps on F that were done to the
-    //  matrix.
+    //  Πραγματοποιούνται τα ίδια βήματα απαλοιφής για το F που έγιναν για το
+    //  πίνακα.
     //
 
     f[0] = f[0] / adiag[0];
@@ -58,7 +58,7 @@ void Solve::solve(double adiag[], double aleft[], double arite[], double f[], co
     }//for
 
     //
-    //  And now carry out the steps of "back substitution".
+    //  τώρα εκτελούνται τα βήματα της αντικατάστασης προς τα πίσω.
     //
 
     for (int i = nu - 2; 0 <= i; i--)
